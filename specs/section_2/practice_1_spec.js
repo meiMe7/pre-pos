@@ -15,9 +15,9 @@ describe('practice-2-1', function () {
            ] ;
 
     it("把A集合中相同的元素统计出数量", function () {
-        var result = count_same_elements(collection);
+        var result = count_same_elements(collection_a);
 
-        expect(result).toBe([
+        expect(result.toString()).toBe([
             {key: "a", count: 3},
             {key: "e", count: 7},
             {key: "h", count: 11},
@@ -27,7 +27,7 @@ describe('practice-2-1', function () {
             {key: "g", count: 7},
             {key: "b", count: 6},
             {key: "d", count: 5}
-           ] );
+        ].toString());
     });
 
 
