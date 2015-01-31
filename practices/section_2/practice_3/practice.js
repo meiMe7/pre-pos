@@ -38,7 +38,7 @@ function count_same_elements(collection) {
     for (var j = 0; j < result.length; j++) {
         var flag = false;
         for (var k = 0; k < arr_temp.length; k++) {
-            if (arr_temp[k].name.indexOf(result[j].name) > -1) {
+            if (arr_temp[k].name==(result[j].name) ) {
                 arr_temp[k].summary = arr_temp[k].summary + result[j].summary;
                 flag = true;
                 break;
@@ -48,8 +48,8 @@ function count_same_elements(collection) {
             arr_temp.push(result[j])
         }
     }
-    result = arr_temp;
-    return result;
+
+    return arr_temp;
 }
 
 module.exports = count_same_elements;
