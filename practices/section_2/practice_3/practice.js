@@ -1,18 +1,20 @@
 function count_same_elements(collection) {
     //在这里写入代码
     var result = [];
-    var obj = {name: 'a', summary: 0};
+    var obj = {name: '', summary: 0};
     for (var i = 0; i <= collection.length; i++) {
         if (collection[i] == obj.name) {
             obj.summary++;
         }
         else {
+            if (obj.name == '')var obj = {name: collection[i], summary: 1};
+            else {
 
             result.push(obj);
             var obj = {name: collection[i], summary: 1};
-
         }
-    }
+        }}
+
     for (var j = 0; j < result.length; j++) {
         var obj_2 = result[j].name;
         var arr = new String(obj_2).split("-");
@@ -38,7 +40,7 @@ function count_same_elements(collection) {
     for (var j = 0; j < result.length; j++) {
         var flag = false;
         for (var k = 0; k < arr_temp.length; k++) {
-            if (arr_temp[k].name==(result[j].name) ) {
+            if (arr_temp[k].name.indexOf(result[j].name) > -1) {
                 arr_temp[k].summary = arr_temp[k].summary + result[j].summary;
                 flag = true;
                 break;
@@ -48,7 +50,6 @@ function count_same_elements(collection) {
             arr_temp.push(result[j])
         }
     }
-
     return arr_temp;
 }
 

@@ -2,6 +2,10 @@ function count_same_elements(collection)
 {
     //在这里写入代码
     var temp_arr =find_data(collection);
+ return    split_data(temp_arr);
+}
+function split_data(temp_arr){
+
     for (var i=0;i<temp_arr.length;i++) {
         var arr =  new String(temp_arr[i].key).split("-");
 
