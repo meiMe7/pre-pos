@@ -15,13 +15,13 @@ describe('practice-1-3', function () {
         ];
 
     it("把A集合中相同的元素统计出数量", function () {
-        var result = count_same_elements(collection);
+        var result = count_same_elements(collection_a);
 
-        expect(result).toBe([
+        expect(result).toEqual([
             {name: "a", summary: 3},
             {name: "e", summary: 7},
             {name: "h", summary: 11},
-            {name: "t", summary: 20},
+            {name: "t", summary: 19},
             {name: "f", summary: 9},
             {name: "c", summary: 8},
             {name: "g", summary: 7},

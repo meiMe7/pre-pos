@@ -11,9 +11,10 @@ function count_same_elements(collection) {
                               }
            else
             {
+                var obj={key:collection[i],count:1};
                 result.push(obj);
                 sum1 = 2;
-                var obj={key:collection[i],count:1};
+
             }
 
 

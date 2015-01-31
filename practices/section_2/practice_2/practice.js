@@ -13,13 +13,13 @@ function count_same_elements(collection)
                 sum1++;
             }
           else {
+                var obj = {key: collection[i], count: 1};
                result.push(obj);
                 sum1 = 2;
-              var obj = {key: collection[i], count: 1};
+
             }
 
         var arr =  new String(collection[i]).split("-");
-
         if(arr[1]!=undefined)
         {   obj.key =arr[0];
             obj.count=arr[1];
