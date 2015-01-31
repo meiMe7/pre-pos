@@ -1,26 +1,26 @@
 function count_same_elements(collection) {
     //在这里写入代码
-    var result =[];
-    var sum1=1;
+    return  find_data(collection)
 
-    var obj = {key: 'a', count: 1};
-    for (var i=0;i<= collection.length;i++) {
-           if(collection[i] == obj.key) {
-               obj.count = sum1;
-                sum1++;
-                              }
-           else
-            {
-                var obj={key:collection[i],count:1};
-                result.push(obj);
-                sum1 = 2;
-
-            }
-
-
-    }
-    return result;
 }
+function find_data(collection_a){var result =[];
+
+    for (var i=0;i< collection_a.length;i++) {
+        var  sum = 1;
+        var obj = {};
+        for (var j=i+1;j< collection_a.length;j++){
+            if(collection_a[i] == collection_a[j]) {
+                sum ++;
+                i=j;
+            }
+        }
+
+        obj = {key:collection_a[i],count:sum};
+
+        obj.count = sum;
+        result.push(obj);
+    }
+    return result;}
 
 module.exports = count_same_elements;
 

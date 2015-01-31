@@ -10,7 +10,6 @@ function create_updated_collection(collection_a, object_b)
 
             if (collection_a[i].key ==  object_b['value'][j]) {
                 collection_a[i].count--;
-
             }
         }
 

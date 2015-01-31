@@ -1,33 +1,37 @@
 function count_same_elements(collection)
 {
     //在这里写入代码
-    var result =[];
-    var sum1=1;
+    var temp_arr =find_data(collection);
+    for (var i=0;i<temp_arr.length;i++) {
+        var arr =  new String(temp_arr[i].key).split("-");
 
-    var obj = {key: 'a', count: 1};
-    for (var i=0;i<collection.length;i++) {
-
-
-            if (collection[i] == obj.key) {
-               obj.count = sum1;
-                sum1++;
-            }
-          else {
-                var obj = {key: collection[i], count: 1};
-               result.push(obj);
-                sum1 = 2;
-
-            }
-
-        var arr =  new String(collection[i]).split("-");
         if(arr[1]!=undefined)
-        {   obj.key =arr[0];
-            obj.count=arr[1];
-            result.push(obj);
+        {   temp_arr[i].key =arr[0];
+            temp_arr[i].count=arr[1];
+
         }
+
     }
-    return result;
+    return temp_arr;
 }
+function find_data(collection_a){var result =[];
+
+    for (var i=0;i< collection_a.length;i++) {
+        var  sum = 1;
+        var obj = {};
+        for (var j=i+1;j< collection_a.length;j++){
+            if(collection_a[i] == collection_a[j]) {
+                sum ++;
+                i=j;
+            }
+        }
+
+        obj = {key:collection_a[i],count:sum};
+
+        obj.count = sum;
+        result.push(obj);
+    }
+    return result;}
 
 module.exports = count_same_elements;
 
