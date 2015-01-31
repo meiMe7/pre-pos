@@ -14,6 +14,7 @@ var temp_arr = find_data(collection_a);
    var result= third_less(temp_arr,object_b);
     return result;
 }
+//找到相同元素个数 生成新数组返回
 function find_data(collection_a){var result =[];
 
     for (var i=0;i< collection_a.length;i++) {
@@ -32,7 +33,7 @@ function find_data(collection_a){var result =[];
         result.push(obj);
     }
     return result;}
-
+//满三减一 函数
 function third_less(collection_a, object_b)
 {
 

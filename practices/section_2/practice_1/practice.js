@@ -3,6 +3,7 @@ function count_same_elements(collection) {
     return  find_data(collection)
 
 }
+//找到相同元素个数 生成新数组返回
 function find_data(collection_a){var result =[];
 
     for (var i=0;i< collection_a.length;i++) {

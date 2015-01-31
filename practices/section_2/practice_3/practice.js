@@ -2,6 +2,7 @@ function count_same_elements(collection) {
     //在这里写入代码
     var result = [];
     var obj = {name: '', summary: 0};
+    //1.统计数组中相同元素的数量
     for (var i = 0; i <= collection.length; i++) {
         if (collection[i] == obj.name) {
             obj.summary++;
@@ -14,7 +15,7 @@ function count_same_elements(collection) {
             var obj = {name: collection[i], summary: 1};
         }
         }}
-
+    //2.将数组中的待切割字符串,完成切割,放入数组
     for (var j = 0; j < result.length; j++) {
         var obj_2 = result[j].name;
         var arr = new String(obj_2).split("-");
@@ -36,6 +37,7 @@ function count_same_elements(collection) {
 
 
     }
+    //3.将数组中的待切割字符串,同名的值相加放入数组
     var arr_temp = [];
     for (var j = 0; j < result.length; j++) {
         var flag = false;

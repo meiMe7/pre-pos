@@ -4,6 +4,7 @@ function count_same_elements(collection)
     var temp_arr =find_data(collection);
  return    split_data(temp_arr);
 }
+//以'-'将数组中的元素切割
 function split_data(temp_arr){
 
     for (var i=0;i<temp_arr.length;i++) {
@@ -18,6 +19,7 @@ function split_data(temp_arr){
     }
     return temp_arr;
 }
+//找到相同元素个数 生成新数组返回
 function find_data(collection_a){var result =[];
 
     for (var i=0;i< collection_a.length;i++) {
